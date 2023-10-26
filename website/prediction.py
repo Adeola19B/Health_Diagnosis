@@ -14,6 +14,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 @prediction.route('/predict', methods=["POST", 'GET'])
 def predict():
+
     if request.method == "POST":
         to_predict_list = request.form.to_dict()
         to_predict_list = list(to_predict_list.values())
